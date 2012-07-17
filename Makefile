@@ -7,7 +7,7 @@ URL="https://github.com/SimpleFinance/waitforit"
 LICENSE="Apache-2.0"
 PREFIX=/usr/local
 
-BUILDCMD=-n ${NAME} -s dir -v ${VERSION} --url=${URL} --description=${DESCRIPTION} -m ${MAINTAINER} --vendor=${VENDOR} --license=${LICENSE} --prefix=${PREFIX} -a all -e bin
+BUILDCMD=-n ${NAME} -s dir -v ${VERSION} --url=${URL} --description=${DESCRIPTION} -m ${MAINTAINER} --vendor=${VENDOR} --license=${LICENSE} --prefix=${PREFIX} -a all bin
 
 clean:
 	rm -f *.deb
