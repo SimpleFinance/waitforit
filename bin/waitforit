@@ -77,7 +77,10 @@ while [ $(date +'%s') -lt $end ]; do
     before=$(date +'%s')
     curl --max-time 2 -fs "http://${host}:${port}${url}" >/dev/null 2>&1 && exit 0
     after=$(date +'%s')
-    sleep $((after - before - interval))
+    sleepfor=$((after - before - interval))
+    if [ $sleepfor -gt 0 ]; then
+        sleep $sleepfor
+    fi
 done
 echo "service failed to respond to healthcheck for $(($(date +'%s') - start)) seconds"
 exit 1
