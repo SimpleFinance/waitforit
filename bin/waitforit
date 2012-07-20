@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 NAME="waitforit"
-VERSION="0.1"
+VERSION="0.1.1"
 
 function version() {
     echo "${NAME}: ${VERSION}"
